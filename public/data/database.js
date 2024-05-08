@@ -62,7 +62,7 @@ export let coders=[
     {
         id: 11,
         name: "joancito",
-        lastaName: "zapata",
+        lastName: "zapata",
         email: "zapatajoan05@gmail.com"
     },
     {
