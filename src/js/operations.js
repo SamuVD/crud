@@ -1,6 +1,5 @@
-export function index(coders,tbody) {
-
-  tbody.innerHTML= ``
+export function index(coders, tbody) {
+  tbody.innerHTML = ``;
 
   coders.forEach((coder) => {
     tbody.innerHTML += `
@@ -20,26 +19,23 @@ export function index(coders,tbody) {
 }
 
 export function create(coders, name, lastName, email) {
-  const tempCoder={
+  const tempCoder = {
     id: Date.now(),
     name: name.value,
     lastName: lastName.value,
-    email: email.value
-  }
+    email: email.value,
+  };
 
-  coders.push(tempCoder)
+  coders.push(tempCoder);
 }
 
-
-
-
-
-
-
-
-
-
-
+export function deleteItem(coders, idParaEliminar) {
+  coders.forEach((coder, index) => {
+    if (coder.id == idParaEliminar) {
+      coders.splice(index, 1);
+    }
+  });
+}
 
 // export function listWithBasicElements(coders,tbody) {
 //     coders.forEach(coder => {
